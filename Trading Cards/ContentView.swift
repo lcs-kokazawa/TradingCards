@@ -14,12 +14,25 @@ struct ContentView: View {
                 
                 LinearGradient(colors:[.green,.yellow], startPoint: .topLeading, endPoint: .bottomLeading)
                 VStack {
-                    Text("Lion")
-                        .bold()
-                        .font(Font.custom(  "AmericanTypewriter", size: 50))
-                        .padding(.horizontal, 20)
-                        .background(Color.white)
-                        .padding(.top, 20)
+                    HStack {
+                        
+
+                        
+                        Text("Lion")
+                            .bold()
+                            .font(Font.custom(  "AmericanTypewriter", size: 50))
+                            .padding(.horizontal, 20)
+                            .background(Color.white)
+                            .padding(.top, 20)
+                        
+                        Spacer()
+                        
+                    }
+                    // Creates a border
+                    .overlay(
+                        Rectangle()
+                            .stroke(Color.orange, lineWidth: 2)
+                    )
 
                     Image("Lion")
                         .padding()
